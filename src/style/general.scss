@@ -1,3 +1,7 @@
+// IMPORT AREA
+@import './variables.scss';
+
+
 // RESET
 * {
     margin: 0;
@@ -10,3 +14,11 @@
     width: 70%;
     margin: auto;
 }
+
+
+
+// img
+img { 
+    max-width: 100%;
+}
+
