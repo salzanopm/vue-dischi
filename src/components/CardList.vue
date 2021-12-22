@@ -40,11 +40,11 @@ export default {
     section {
         height: 100%;
         background-color: #1e2d3b;
-        
     }
 
     .card-wrapper {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
     }
 </style>

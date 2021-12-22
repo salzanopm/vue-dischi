@@ -1,6 +1,6 @@
 // IMPORT AREA
 @import './variables.scss';
-
+@import '~@fontsource/alatsi/400.css';
 
 // RESET
 * {
@@ -13,6 +13,10 @@
 .container {
     width: 70%;
     margin: auto;
+}
+
+body {
+    font-family: alatsi;
 }
 
 
