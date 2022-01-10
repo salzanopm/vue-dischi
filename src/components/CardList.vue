@@ -1,9 +1,9 @@
 <template>
     <section>
+        <FilterGenre/>
         <div class="container">
             <div class="card-wrapper">
-                <Cards v-for="(card, index) in cardArray" :key="index" :details="card"/>
-                
+                <Cards v-for="(card, index) in cardArray" :key="index" :details="card"/>   
             </div>
         </div> 
     </section>
@@ -12,10 +12,12 @@
 
 import axios from 'axios';
 import Cards from './Cards.vue';
+import FilterGenre from './FilterGenre.vue';
 export default {
     name:'CardlList',
     components: {
-        Cards
+        Cards,
+        FilterGenre
     },
     data: function() {
         return {
