@@ -1,9 +1,9 @@
 <template>
     <section>
-        <FilterGenre/>
+        <FilterGenre @selectClicked="selectDone"/>
         <div class="container">
             <div class="card-wrapper">
-                <Cards v-for="(card, index) in cardArray" :key="index" :details="card"/>   
+                <Cards v-for="(card, index) in filteredGenres" :key="index" :details="card"/>   
             </div>
         </div> 
     </section>
@@ -22,8 +22,26 @@ export default {
     data: function() {
         return {
             cardArray: [],
+            valueSelected: '',
         };
     },
+    methods: {
+        selectDone: function(value) {
+            this.valueSelected = value;
+        }
+    },
+    computed: {
+        filteredGenres: function() {
+            if(this.valueSelected === '') {
+                return this.cardArray;
+            }
+            const filteredArray = this.cardArray.filter((item) => {
+                return item.genre.toLowerCase().includes(this.valueSelected.toLowerCase());
+            });
+            return filteredArray;
+        }
+    },
+
     created: function() {
         axios.get('https://flynn.boolean.careers/exercises/api/array/music')
         .then((response) =>{
