@@ -1,6 +1,7 @@
 <template>
     <div class="filter-genre">
         <select @change="$emit('selectClicked', selectValue)" v-model="selectValue" name="" id="select-genre">
+            <option value="">Tutti i generi</option>
             <option value="Rock">Rock</option>
             <option value="Jazz">Jazz</option>
             <option value="Pop">Pop</option>

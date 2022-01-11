@@ -58,7 +58,7 @@ export default {
     }
 
     section {
-        height: 100%;
+        height: 100vh;
         background-color: #1e2d3b;
     }
 
